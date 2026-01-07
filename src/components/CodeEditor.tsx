@@ -1,6 +1,6 @@
 import { useState, useRef, useMemo, KeyboardEvent, useEffect } from 'react';
 import { getCurrentWord, getCompletions, extractVariables, extractFunctions, CompletionItem } from '../utils/autocomplete';
-import { getAllKeywords, findConceptByKeyword } from '../data/tutorial';
+import { getAllKeywords } from '../data/tutorial';
 import { KeywordTooltip } from './KeywordTooltip';
 import { CodeEditorOverlay } from './CodeEditorOverlay';
 import './CodeEditor.css';
@@ -22,7 +22,7 @@ export function CodeEditor({ value, onChange, placeholder, onOpenTutorial }: Cod
   const [completionPosition, setCompletionPosition] = useState({ top: 0, left: 0 });
   const [selectedKeyword, setSelectedKeyword] = useState<string | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
-  const [tooltipTimeout, setTooltipTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [tooltipTimeout, setTooltipTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
   const keywords = useMemo(() => getAllKeywords(), []);
 
   // Функция для вычисления позиции курсора из координат мыши
@@ -118,7 +118,6 @@ export function CodeEditor({ value, onChange, placeholder, onOpenTutorial }: Cod
           const paddingLeft = parseFloat(styles.paddingLeft) || 20;
           
           // Позиционируем подсказку справа от слова, чтобы не перекрывать его
-          const wordEnd = start + word.length;
           const wordEndColumn = column + word.length;
           
           setTooltipPosition({
@@ -177,7 +176,7 @@ export function CodeEditor({ value, onChange, placeholder, onOpenTutorial }: Cod
   };
 
   const updateCompletions = (text: string, position: number) => {
-    const { word, start, end } = getCurrentWord(text, position);
+    const { word, start } = getCurrentWord(text, position);
     
     // Показываем автодополнение только если есть хотя бы один символ
     if (word.length > 0 && start < position) {
@@ -272,7 +271,7 @@ export function CodeEditor({ value, onChange, placeholder, onOpenTutorial }: Cod
     const textarea = textareaRef.current;
     const text = value;
     const position = textarea.selectionStart;
-    const { word, start, end } = getCurrentWord(text, position);
+    const { start, end } = getCurrentWord(text, position);
 
     const insertText = completion.insertText || completion.label;
     const newText = text.substring(0, start) + insertText + text.substring(end);

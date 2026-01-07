@@ -1,6 +1,6 @@
 // Парсер - строит AST из токенов
 
-import { Lexer, Token, TokenType } from './lexer';
+import { Token, TokenType } from './lexer';
 import { Expression, Statement, Program } from './types';
 
 export class Parser {

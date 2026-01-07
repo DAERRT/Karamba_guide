@@ -64,10 +64,6 @@ export class Lexer {
       return this.createToken('EOF');
     }
 
-    const start = this.position;
-    const startLine = this.line;
-    const startColumn = this.column;
-
     const char = this.advance();
 
     // Числа
