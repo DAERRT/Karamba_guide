@@ -1,0 +1,117 @@
+.keyword-tooltip {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  border: 2px solid #667eea;
+  animation: tooltipAppear 0.2s ease-out;
+  pointer-events: auto;
+}
+
+@keyframes tooltipAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tooltip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 6px 6px 0 0;
+  color: white;
+}
+
+.tooltip-keyword {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.tooltip-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.tooltip-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tooltip-content {
+  padding: 16px;
+}
+
+.tooltip-title {
+  color: #667eea;
+  font-size: 1.2em;
+  margin: 0 0 12px 0;
+}
+
+.tooltip-description {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+}
+
+.tooltip-why {
+  background: #f0f4ff;
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 3px solid #667eea;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #555;
+}
+
+.tooltip-why strong {
+  color: #667eea;
+}
+
+.tooltip-footer {
+  padding: 12px 16px;
+  border-top: 1px solid #e0e0e0;
+  background: #f8f9fa;
+  border-radius: 0 0 6px 6px;
+}
+
+.tooltip-button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tooltip-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.tooltip-button:active {
+  transform: translateY(0);
+}
+

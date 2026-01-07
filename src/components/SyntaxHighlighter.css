@@ -1,0 +1,198 @@
+/* Подсветка синтаксиса для языка Карамба */
+
+.syntax-highlighter.karamba-syntax {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.syntax-highlighter.karamba-syntax code {
+  background: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Токены для Карамба - пиратская цветовая палитра */
+.syntax-highlighter.karamba-syntax .token-keyword {
+  color: #569cd6; /* Синий для ключевых слов */
+  font-weight: 600;
+}
+
+.syntax-highlighter.karamba-syntax .token-string {
+  color: #ce9178; /* Оранжевый для строк */
+}
+
+.syntax-highlighter.karamba-syntax .token-number {
+  color: #b5cea8; /* Зеленый для чисел */
+}
+
+.syntax-highlighter.karamba-syntax .token-operator {
+  color: #d4d4d4; /* Белый для операторов */
+  font-weight: 500;
+}
+
+.syntax-highlighter.karamba-syntax .token-comment {
+  color: #6a9955; /* Зеленый для комментариев */
+  font-style: italic;
+}
+
+.syntax-highlighter.karamba-syntax .token-variable {
+  color: #9cdcfe; /* Светло-синий для переменных */
+}
+
+.syntax-highlighter.karamba-syntax .token-function {
+  color: #dcdcaa; /* Желтый для функций */
+}
+
+.syntax-highlighter.karamba-syntax .token-boolean {
+  color: #4ec9b0; /* Бирюзовый для булевых значений */
+}
+
+.syntax-highlighter.karamba-syntax .token-text {
+  color: #d4d4d4; /* Белый для обычного текста */
+}
+
+/* Стили для Python и JavaScript в учебнике */
+.syntax-highlighter :global(pre[class*="language-python"]),
+.syntax-highlighter :global(pre[class*="language-javascript"]) {
+  background: #2b2b2b !important;
+  margin: 0 !important;
+}
+
+.syntax-highlighter :global(code[class*="language-python"]),
+.syntax-highlighter :global(code[class*="language-javascript"]) {
+  color: #a9b7c6 !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+/* Python - PyCharm Darcula тема */
+.syntax-highlighter :global(.language-python .token.keyword) {
+  color: #cc7832 !important;
+  font-weight: bold !important;
+}
+
+.syntax-highlighter :global(.language-python .token.string) {
+  color: #6a8759 !important;
+}
+
+.syntax-highlighter :global(.language-python .token.number) {
+  color: #6897bb !important;
+}
+
+.syntax-highlighter :global(.language-python .token.function) {
+  color: #ffc66d !important;
+}
+
+.syntax-highlighter :global(.language-python .token.comment) {
+  color: #808080 !important;
+  font-style: italic !important;
+}
+
+.syntax-highlighter :global(.language-python .token.boolean) {
+  color: #cc7832 !important;
+}
+
+/* JavaScript - WebStorm Darcula тема */
+.syntax-highlighter :global(.language-javascript .token.keyword) {
+  color: #cc7832 !important;
+  font-weight: bold !important;
+}
+
+.syntax-highlighter :global(.language-javascript .token.string) {
+  color: #6a8759 !important;
+}
+
+.syntax-highlighter :global(.language-javascript .token.number) {
+  color: #6897bb !important;
+}
+
+.syntax-highlighter :global(.language-javascript .token.function) {
+  color: #ffc66d !important;
+}
+
+.syntax-highlighter :global(.language-javascript .token.comment) {
+  color: #808080 !important;
+  font-style: italic !important;
+}
+
+.syntax-highlighter :global(.language-javascript .token.boolean) {
+  color: #cc7832 !important;
+}
+
+.syntax-highlighter :global(.language-javascript .token.class-name) {
+  color: #ffc66d !important;
+}
+
+/* Переопределение стилей для Python (PyCharm Darcula) */
+.syntax-highlighter :global(.language-python) {
+  color: #a9b7c6 !important;
+}
+
+.syntax-highlighter :global(.language-python .token.keyword) {
+  color: #cc7832 !important; /* Оранжевый для ключевых слов */
+  font-weight: bold !important;
+}
+
+.syntax-highlighter :global(.language-python .token.string) {
+  color: #6a8759 !important; /* Зеленый для строк */
+}
+
+.syntax-highlighter :global(.language-python .token.number) {
+  color: #6897bb !important; /* Синий для чисел */
+}
+
+.syntax-highlighter :global(.language-python .token.function) {
+  color: #ffc66d !important; /* Желтый для функций */
+}
+
+.syntax-highlighter :global(.language-python .token.comment) {
+  color: #808080 !important; /* Серый для комментариев */
+  font-style: italic !important;
+}
+
+.syntax-highlighter :global(.language-python .token.boolean) {
+  color: #cc7832 !important; /* Оранжевый для булевых */
+}
+
+/* Переопределение стилей для JavaScript (WebStorm Darcula) */
+.syntax-highlighter :global(.language-javascript) {
+  color: #a9b7c6 !important;
+}
+
+.syntax-highlighter :global(.language-javascript .token.keyword) {
+  color: #cc7832 !important; /* Оранжевый для ключевых слов */
+  font-weight: bold !important;
+}
+
+.syntax-highlighter :global(.language-javascript .token.string) {
+  color: #6a8759 !important; /* Зеленый для строк */
+}
+
+.syntax-highlighter :global(.language-javascript .token.number) {
+  color: #6897bb !important; /* Синий для чисел */
+}
+
+.syntax-highlighter :global(.language-javascript .token.function) {
+  color: #ffc66d !important; /* Желтый для функций */
+}
+
+.syntax-highlighter :global(.language-javascript .token.comment) {
+  color: #808080 !important; /* Серый для комментариев */
+  font-style: italic !important;
+}
+
+.syntax-highlighter :global(.language-javascript .token.boolean) {
+  color: #cc7832 !important; /* Оранжевый для булевых */
+}
+
+.syntax-highlighter :global(.language-javascript .token.class-name) {
+  color: #ffc66d !important; /* Желтый для классов */
+}

@@ -1,0 +1,83 @@
+.code-editor-overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.code-editor-overlay {
+  padding: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: transparent;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  min-height: 100%;
+  background: transparent;
+}
+
+.code-editor-highlighted {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: inherit;
+  word-wrap: inherit;
+}
+
+.code-editor-highlighted code {
+  background: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: transparent;
+}
+
+/* Токены для Карамба */
+.code-editor-highlighted .token-keyword {
+  color: #569cd6; /* Синий для ключевых слов */
+  font-weight: 600;
+}
+
+.code-editor-highlighted .token-string {
+  color: #ce9178; /* Оранжевый для строк */
+}
+
+.code-editor-highlighted .token-number {
+  color: #b5cea8; /* Зеленый для чисел */
+}
+
+.code-editor-highlighted .token-operator {
+  color: #d4d4d4; /* Белый для операторов */
+  font-weight: 500;
+}
+
+.code-editor-highlighted .token-comment {
+  color: #6a9955; /* Зеленый для комментариев */
+  font-style: italic;
+}
+
+.code-editor-highlighted .token-variable {
+  color: #9cdcfe; /* Светло-синий для переменных */
+}
+
+.code-editor-highlighted .token-function {
+  color: #dcdcaa; /* Желтый для функций */
+}
+
+.code-editor-highlighted .token-boolean {
+  color: #4ec9b0; /* Бирюзовый для булевых значений */
+}
+
+.code-editor-highlighted .token-text {
+  color: #d4d4d4; /* Белый для обычного текста */
+}
+
